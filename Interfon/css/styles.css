@@ -1,0 +1,147 @@
+/*****************************************************************************************/
+body {
+  width: 100%;
+  height: 100%;
+  --color: #4f2102;
+  background-color: #783c07;
+  background-image: linear-gradient(0deg,
+      transparent 24%,
+      var(--color) 25%,
+      var(--color) 26%,
+      transparent 27%,
+      transparent 74%,
+      var(--color) 75%,
+      var(--color) 76%,
+      transparent 77%,
+      transparent),
+    linear-gradient(90deg,
+      transparent 24%,
+      var(--color) 25%,
+      var(--color) 26%,
+      transparent 27%,
+      transparent 74%,
+      var(--color) 75%,
+      var(--color) 76%,
+      transparent 77%,
+      transparent);
+  background-size: 55px 55px;
+}
+
+/*****************************************************************************************/
+header {
+  background: #f59d23;
+
+  width: 700px;
+  margin: auto;
+  margin-top: 20px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+}
+
+ul {
+  list-style: none;
+  overflow: hidden;
+}
+
+li {
+  float: inline-start;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+a {
+  display: block;
+  padding: 10px;
+  color: #2a1800;
+  text-decoration: none;
+}
+
+li:hover {
+  background: #af6414;
+  border-radius: 10px;
+}
+
+/*****************************************************************************************/
+#TituloInterfon {
+  width: 500px;
+  height: 45px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  color: #2a1800;
+  background: #f59d23;
+  margin: auto;
+  /*Redondeo Esquinas*/
+  margin-top: 15px;
+  /*Centrar el texto*/
+}
+
+.Titulos {
+  font-size: 2em;
+  color: #2e2e2e;
+  font-weight: 700;
+  margin: 5px 0 10px 0;
+  z-index: 2;
+}
+
+.Textos {
+  height: 30px;
+  width: 250px;
+  background-color: #ffc973;
+  border-radius: 5px;
+  display: grid;
+  margin: auto;
+}
+
+#Etiquetas {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.Botones {
+  background: #af6414;
+  border-radius: 10px;
+  margin: auto;
+  display: grid;
+  font-style: italic;
+  font-size: 20px;
+  color: white;
+}
+
+.Botones:hover {
+  background: #ff9500;
+  border-radius: 10px;
+  font-size: 20px;
+  color: black;
+}
+
+/*****************************************************************************************/
+.Formulario {
+  width: 600px;
+  height: 650px;
+  display: flex;
+  flex-direction: column;
+  background-color: #efffb7;
+  padding: 30px 30px 30px 30px;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.062);
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  margin: auto;
+}
+
+.Formulario:before {
+  position: absolute;
+  content: "";
+  width: 300px;
+  height: 300px;
+  background-color: #af6414;
+  transform: rotate(45deg);
+  left: -180px;
+  bottom: 30px;
+  z-index: 1;
+  border-radius: 30px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.082);
+}
+
+/*****************************************************************************************/

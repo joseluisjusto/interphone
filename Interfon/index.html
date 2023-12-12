@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="assets/plugins/qrCode.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="css\styles.css" />
+    <link rel="stylesheet" href="css\alertify.core.css" />
+    <link rel="stylesheet" href="css\alertify.default.css" />
+    <script src="js\jquery.js"></script>
+    <script src="js\Funciones.js"></script>
+    <script src="js\alertify.js"></script>
+    <title>Interfon</title>
+</head>
+
+<body>
+    <h1>
+        <div id="TituloInterfon">INTERFON</div>
+    </h1>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#" id="MC0">Registro Visitante</a></li>
+                <li><a href="#" id="MC1">Inico Guardia</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <!–***********************************************************************************************–>
+        <div id="C0" style="display: none;">
+            <form action="php/Correo.php" method="post" class="Formulario">
+                <tr>
+                    <center>
+                        <p class="Titulos">Registro Visita</p>
+                    </center>
+                </tr>
+                <tr>
+                    <input required="" class="Textos" type="text" id="RVNo" placeholder="Nombres (s)">
+                    <input required="" class="Textos" type="text" id="RVAP" placeholder="Apellido Paterno">
+                    <input required="" class="Textos" type="text" id="RVAM" placeholder="Apellido Materno">
+                    <input required="" class="Textos" type="email" id="RVCo" placeholder="Correo">
+                    <input required="" class="Textos" type="number" id="RVTe" placeholder="Telefono">
+                    <input required="" class="Textos" type="number" id="RVDp" placeholder="Numero de Departamento">
+               
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Enviar" class="Botones" id="RVEnviar"></td>
+                </tr>
+            </form>
+        </div>
+        <!–***********************************************************************************************–>
+            <div id="C1" style="display: none;">
+                <div id="Formulario" style="display: on;">
+                    <form action="" class="Formulario">
+                        <tr>
+                            <center>
+                                <p class="Titulos">Inico Guardia</p>
+                            </center>
+                        </tr>
+                        <div><input type="text" class="Textos" id="username" placeholder="Usuario"></div>
+                        <div><input type="password" class="Textos" id="password" placeholder="Contraseña"></div>
+                        <tr>
+                            <td><input type="Button" value="Iniciar" class="Botones" id="IniciarSesion"></td>
+                        </tr>
+                    </form>
+                </div>
+                <!–***********************************************************************************************–>
+                    <div id="SupMenu" style="display: none;">
+                        <form action="" class="Formulario">
+                            <tr>
+                                <td><input type="Button" value="Escanear QR" class="Botones" id="EQR"></td>
+                                <td><input type="Button" value="Nuevo Trabajador" class="Botones" id="NTra"></td>
+                                <td><input type="Button" value="Regresar" class="Botones" id="Reg"></td>
+                            </tr>
+                        </form>
+                    </div>
+                    <!–***********************************************************************************************–>
+                        <div id="Escanear" style="display: none;">
+                            <form action="" class="Formulario">
+                                <div class="row justify-content-center mt-4">
+                                    <div class="row text-center">
+                                        <a id="btn-scan-qr" href="#">
+                                            <img src="https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2017/07/1499401426qr_icon.svg"
+                                                class="img-fluid text-center" width="175">
+                                            <a />
+                                            <canvas hidden="" id="qr-canvas" class="img-fluid"></canvas>
+                                    </div>
+                                    <audio id="audioScaner" src="assets/sonido.mp3"></audio>
+                                    <script src="assets/js/index.js"></script>
+
+                                    <td><input type="Button" value="Encender Camara" class="Botones"
+                                            onclick="encenderCamara()"></td>
+                                    .
+                                    <td><input type="Button" value="Detener Camara" class="Botones"
+                                            onclick="cerrarCamara()"></td>
+                                    .
+                                    <td><input type="Button" value="Regresar" class="Botones" id="GRE"></td>
+                                </div>
+                            </form>
+                        </div>
+                        <!–***********************************************************************************************–>
+                            <div id="NuevoTrabajador" style="display: none;">
+                                <form action="" class="Formulario">
+                                    <center>
+                                        <p class="Titulos">Datos Trabajador</p>
+                                    </center>
+                                    <input required="" class="Textos" type="text" id="RNTNom" placeholder="Nombres (s)">
+                                    <input required="" class="Textos" type="text" id="RNTAPP"
+                                        placeholder="Apellido Paterno">
+                                    <input required="" class="Textos" type="text" id="RNTNAPM"
+                                        placeholder="Apellido Materno">
+                                    <center>
+                                        <p class="Titulos">Datos Departamento</p>
+                                    </center>
+                                    <div><input type="text" class="Textos" id="RNTNum" placeholder="Número de piso">
+                                    </div>
+                                    <td>
+                                        <select class="Textos" id="RNTAre_Depa">
+                                            <option value="DS">Desarrollo de Software</option>
+                                            <option value="MD">Marketing Digital</option>
+                                            <option value="RH">Recursos Humanos</option>
+                                            <option value="DG">Diseño Gráfico</option>
+                                        </select>
+                                    </td>
+                                    <tr>
+                                        <td><input type="submit" value="RNTEnviar" class="Botones" id="NTEnviar"></td>
+                                        <td><input type="submit" value="Regresar" class="Botones" id="GRE1"></td>
+                                    </tr>
+                                </form>
+                            </div>
+            </div>
+            <!–***********************************************************************************************–>
+</body>
+
+</html>
